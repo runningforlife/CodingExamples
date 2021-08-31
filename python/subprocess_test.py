@@ -11,6 +11,7 @@ def test_subprocess():
 
     std_out, std_err = subprocess.Popen(cmd, shell=True, stdout=PIPE, stderr=PIPE).communicate()
 
+    print(std_out.decode('utf-8'))
     #print(type(std_out))
     print(str(std_out, 'UTF-8'))
 

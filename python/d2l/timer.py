@@ -1,7 +1,6 @@
 """a timer class to caculate execution time"""
-
-from mxnet import np
 import time
+from mxnet import np
 
 class Timer:
 

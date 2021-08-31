@@ -34,11 +34,37 @@ def func_decorators():
     assert my_get_text("John") == '<div>Hello, John!</div>'
     print("func decorators done")
 
+def cheese_shop(kind, *args, **keywords):
+    """a function which pass tuples & dicts"""
+    print('Do you have any ' , kind, '?')
+    
+    for arg in args:
+        print(arg)
+
+    print('-' * 40)
+
+    for kw in keywords:
+        print(kw, ':', keywords[kw])
+
 def main():
     fib_test()
     func_test()
     lamda_test()
     func_decorators()
+
+    cheese_shop("Limburger", "It's very funny, sir!", "It's really really, really funny, sir.",
+            shopkeeper="Michael Palin",
+            client="John Cleese",
+            sketch="Cheese Shop Sketch")
+
+    word_tuple = ("hah, it's funny", "hahaha, it's really funny funny day", "ok, we got a cheese")
+    person_dict = {"shopKeeper": "Michael",
+                   "client":"John",
+                   "sketch": "cheese Shop sketch"}
+
+    # unpacking parameters
+    cheese_shop("Limburger", *word_tuple, **person_dict)
+
 
 if __name__ == "__main__":
     main()
