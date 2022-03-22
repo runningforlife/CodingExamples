@@ -1,3 +1,4 @@
+/* bitset usage examples */
 #include <bitset>
 #include <iostream>
 #include <string>

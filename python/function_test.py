@@ -46,6 +46,20 @@ def cheese_shop(kind, *args, **keywords):
     for kw in keywords:
         print(kw, ':', keywords[kw])
 
+
+def print_language(*lang):
+    print('My Favorite Programming Language is: ')
+    for lan in lang:
+        print(lan + ' ')
+
+    print('\n')
+
+def daily_task(**task):
+    print('This is my daily task')
+    for key, val in task.items():
+        print(key + "'s task is " + val)
+    print('\n')
+
 def main():
     fib_test()
     func_test()
@@ -64,6 +78,9 @@ def main():
 
     # unpacking parameters
     cheese_shop("Limburger", *word_tuple, **person_dict)
+
+    print_language('C', 'C++', 'Java', 'Python', 'Shell')
+    daily_task(Mon='Learning Python', Tue='Linux Performance')
 
 
 if __name__ == "__main__":

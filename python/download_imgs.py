@@ -6,8 +6,8 @@ import os
 
 class ImageLoader:
 
-    target_w = 1920
-    target_h = 1080
+    target_w = 1920 * 1.3
+    target_h = 1080 * 1.3
 
     url_prefix = "https://images.unsplash.com/"
     saved_loc = "/home/jason/Pictures/Wallpapers/"

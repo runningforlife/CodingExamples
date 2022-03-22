@@ -1,3 +1,4 @@
+/* simple template usage examples */
 #include <iostream>
 #include <string>
 

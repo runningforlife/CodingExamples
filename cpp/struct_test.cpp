@@ -1,6 +1,16 @@
 #include <stdio.h>
 #include <stdint.h>
 
+//#define pragma pack(push)
+#define pragma pack(1)
+struct test1 {
+	char c0;
+	int i2;
+	char c1;
+};
+//#define pragma pack(pop)
+
+
 typedef struct {
     uint32_t magic1;//(0x78E5D4C2)
     uint32_t magic2;//(0x54F7D60E)
@@ -29,4 +39,6 @@ int main(void) {
    int sum_len = sizeof(quec_backup_info_type_t) - 2 * sizeof(uint32_t);
    
    printf("value of len is %d %d\n", len, sum_len);
+
+   printf("test1 size is %d\n", sizeof(test1));
 }

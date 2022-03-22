@@ -1,5 +1,8 @@
-#include<string>
-#include<iostream>
+/* how to use string(c11) */
+#include <string>
+#include <iostream>
+#include <limits>
+#include <algorithm>
 
 using std::string;
 
@@ -31,4 +34,18 @@ int main() {
 	std::cout << "str3 value: " << str3 << std::endl;
 	std::cout << "strp1 addr: " << &strp1 << std::endl;
 	std::cout << "strp2 addr: " << &strp2  << std::endl;
+
+	if (hollywood.find("on") != string::npos) {
+		std::cout << "find substring on" << std::endl;
+	}
+
+	std::cout << "the value of 89.89 is " << std::stof(" 89.89 ") << std::endl;
+	
+	long long ll = std::numeric_limits<long long>::max();
+	std::cout << "the max of long long is " << std::to_string(ll) << std::endl;
+
+	std::transform(hollywood.begin(), hollywood.end(), hollywood.begin(), [](char c) {
+			return std::toupper(c);
+		});
+    std::cout << "uppered hollywood is " << hollywood << std::endl; 
 }

@@ -1,3 +1,4 @@
+/* char array examples in c */
 #include <stdio.h>
 #include <string.h>
 
