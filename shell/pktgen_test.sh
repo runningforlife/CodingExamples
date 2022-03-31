@@ -78,7 +78,7 @@ PROC_DIR=/proc/net/pktgen
 while getopts "i:s:d:m:t:" opts; do
     case $opts in
 	    #iface
-	    i)
+		i)
 		DEV=$OPTARG
 		echo "set device interface to $DEV"
 		;;

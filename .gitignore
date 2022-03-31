@@ -1,2 +1,6 @@
 .vscode
+linux/*.out
 cpp/*.out
+python/*.pyc
+python/modules/__pycache__/*.pyc
+python/__pycache__/*

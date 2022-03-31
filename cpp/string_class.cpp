@@ -60,7 +60,6 @@ private:
 
 String fcn() {
 	String s("hi, move");
-	...
 	return s;
 }
 

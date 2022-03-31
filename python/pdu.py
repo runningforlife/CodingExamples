@@ -36,7 +36,7 @@ class DiskUsageCheck(Thread):
         elif os.path.isdir(self.path):
             
             for (d, d_name, file_names) in os.walk(self.path):
-                for f in file_names:
+                for f in file_names:, 
                     file = os.path.join(d, f)
                     #print('file: ', f)
                     file_size += os.path.getsize(file)
